@@ -3,7 +3,7 @@
 {% block content %}
 
 <ul data-role="listview">
-    {% if xbmc %}<li><a href="{{ url_for('xbmc') }}">XBMC</a></li>{% endif %}
+    {% if xbmc %}<li><a href="{{ url_for('xbmc') }}">Kodi</a></li>{% endif %}
 
     {% for module in available_modules %}
         {% if 'sickbeard' in module.name %}<li><a href="{{ url_for('sickbeard') }}">Sickbeard</a></li>{% endif %}

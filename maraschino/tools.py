@@ -149,7 +149,10 @@ def get_file_list(folder, extensions, prepend_path=True, prepend_path_minus_root
                 else:
                     filelist.append(file)
 
-    return filelist.sort()
+    # Sort file list in alphabetical order
+    filelist.sort(key=str.lower)
+
+    return filelist
 
 def convert_bytes(bytes, with_extension=True):
     bytes = float(bytes)
